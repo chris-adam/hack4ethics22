@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: fastapi
   labels:
-    app: ngfastapiinx
+    app: fastapi
 spec:
   replicas: 1
   selector:

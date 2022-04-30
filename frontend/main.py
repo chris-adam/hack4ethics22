@@ -1,8 +1,9 @@
 from dash import Dash, html, dcc
 from dash.dependencies import Input, Output, State
 import requests
+import os
 
-BACKEND_URI = "localhost:8000"
+BACKEND_URI = os.environ.get("BACKEND_URI", "localhost:8000")
 
 
 colors = {
@@ -68,4 +69,4 @@ def get_product_expiration(product_name: str):
     return f"My product expiration date is {product_data['expiration_date']}"
 
 if __name__ == '__main__':
-    app.run_server(debug=True, threaded=True, port=80)
+    app.run_server(debug=True, threaded=True, port=80, host='0.0.0.0')
