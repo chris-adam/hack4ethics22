@@ -18,7 +18,7 @@ def get_all_products(country_name: str):
     AND pr.ProductName CONTAINS 'Bases'
     RETURN pr.ProductName
     """
-    return graph.run(query).to_data_frame().loc[:, "Product"].to_string()
+    return graph.run(query).to_data_frame().to_string()
 
 
 class Product():
