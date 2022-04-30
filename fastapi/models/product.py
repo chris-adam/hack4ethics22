@@ -15,7 +15,7 @@ def get_all_products(country_name: str):
     query = f"""
     MATCH (cy:Country)--(pr:Product)
     WHERE cy.CountryName = '{country_name}'
-    AND pr.ProductName CONTAINS 'Bases'
+    AND pr.ProductName CONTAINS 'B'
     RETURN pr.ProductName
     """
     return graph.run(query).to_data_frame().to_string()
