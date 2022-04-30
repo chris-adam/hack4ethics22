@@ -3,6 +3,7 @@ kind: Service
 metadata:
   name: fastapi-svc
 spec:
+  type: LoadBalancer
   selector:
     app: fastapi
   ports:

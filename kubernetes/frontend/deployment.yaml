@@ -21,4 +21,4 @@ spec:
         - containerPort: 80
         env:
           - name: BACKEND_URI
-            value: http://fastapi-svc.default.svc.cluster.local:8000
+            value: "fastapi-svc.default.svc.cluster.local:8000"
